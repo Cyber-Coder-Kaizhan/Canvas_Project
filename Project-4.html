@@ -1,0 +1,79 @@
+<html>
+<center>
+
+    <head>
+        <title>
+            My First Canvas
+        </title>
+        <style>
+            #body_tag {
+                background-image: url("https://www.calmsage.com/wp-content/uploads/2020/04/Hues-of-blue-perfect-to-find-your-calm..jpg");
+                background-position: center;
+                background-size: cover;
+            }
+
+            #cvs {
+                background-color: whitesmoke;
+                border-style: solid;
+                border-color: rgb(3, 54, 54);
+                border-width: 30;
+            }
+        </style>
+    </head>
+
+    <body id="body_tag">
+        <h1>
+            My First Canvas(Project)
+        </h1>
+        <canvas id="cvs" width="800" height="600">
+        </canvas>
+        <br><br>
+        <button onclick="clear_out()">Clear</button>
+        <script>
+            canvas = document.getElementById("cvs");
+            pencil = canvas.getContext("2d");
+
+            pencil.beginPath();
+            pencil.strokeStyle = "black";
+            pencil.lineWidth = 2;
+            pencil.rect(200,200, 400, 200);
+            pencil.stroke();
+
+            pencil.beginPath();
+            pencil.strokeStyle = "black";
+            pencil.lineWidth = 10;
+            pencil.arc(400, 300, 40, 0, 360);
+            pencil.stroke();
+
+            pencil.beginPath();
+            pencil.strokeStyle = "blue";
+            pencil.lineWidth = 10;
+            pencil.arc(300, 300, 40, 0, 360);
+            pencil.stroke();
+
+            pencil.beginPath();
+            pencil.strokeStyle = "red";
+            pencil.lineWidth = 10;
+            pencil.arc(500, 300, 40, 0, 360);
+            pencil.stroke();
+
+            pencil.beginPath();
+            pencil.strokeStyle = "yellow";
+            pencil.lineWidth = 10;
+            pencil.arc(350, 340, 40, 0, 360);
+            pencil.stroke();
+
+            pencil.beginPath();
+            pencil.strokeStyle = "green";
+            pencil.lineWidth = 10;
+            pencil.arc(450, 340, 40, 0, 360);
+            pencil.stroke();
+
+            function clear_out() {
+                pencil.clearRect(0, 0, canvas.height, canvas.width);
+            }
+        </script>
+    </body>
+</center>
+
+</html>
